@@ -1,0 +1,76 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 100% 99%;
+    --foreground: 240 10% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 20%;
+
+    --primary: 255 80% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 100% 96%;
+    --secondary-foreground: 255 80% 55%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 346 100% 97%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 255 80% 75%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    @apply bg-gradient-to-br from-brand-purple-light via-white to-brand-pink;
+  }
+  
+  .button-primary {
+    @apply bg-brand-purple text-white hover:bg-brand-purple-dark transition-all duration-300 rounded-full px-6 py-3 font-medium shadow-md hover:shadow-lg;
+  }
+  
+  .button-secondary {
+    @apply bg-white text-brand-purple border border-brand-purple hover:bg-brand-purple hover:text-white transition-all duration-300 rounded-full px-6 py-3 font-medium;
+  }
+  
+  .card-hover {
+    @apply transform transition duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+}

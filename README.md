@@ -13,4 +13,11 @@ npm run
 
 ```
 
+Este projeto contem as seguintes linguagens:
+
+- Vite
+- TypeScript
+- React
+- Tailwind CSS
+
 ## :P
